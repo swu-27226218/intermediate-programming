@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>買い物金額の計算</title>
+</head>
+<body>
+    <h1>買い物金額の計算</h1>
+    <p>開発者ツールのConsoleで結果を確認してください。</p>
+    <script>
+        // STEP 1〜3
+        let price = 120;
+        let count = 2;
+        console.log(price);
+        console.log(count);
+        let total = price * count;
+        console.log('ノートの小計：' + total + '円');
+        if (total >= 300) {
+            console.log('この商品はまとめ買い対象です');
+        } else {
+            console.log('この商品はまとめ買い対象ではありません');
+        }
+
+        // STEP 4
+        let products = [
+            {name: 'ノート', price: 120, count: 2},
+            {name: 'ペン', price: 80, count: 3},
+            {name: 'ファイル', price: 150, count: 1}
+        ];
+        console.log(products);
+
+        // STEP 5〜7
+        let sum = 0;
+        for (let product of products) {
+            let subtotal = product.price * product.count;
+            console.log(product.name + '：小計' + subtotal + '円');
+            sum += subtotal;
+        }
+        console.log('合計金額：' + sum + '円');
+        if (sum >= 500) {
+            console.log('まとめ買いありがとうございます！');
+        } else {
+            console.log('あと' + (500 - sum) + '円でまとめ買い特典です。');
+        }
+
+        // STEP 8：個数を変更した場合の確認
+        // ノート3個、ペン3個、ファイル1個：750円
+        // ノート2個、ペン0個、ファイル1個：390円（あと110円）
+        // ノート1個、ペン1個、ファイル2個：500円
+    </script>
+</body>
+</html>
