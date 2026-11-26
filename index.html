@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>買い物かご計算アプリ</title>
+</head>
+<body>
+    <h1>買い物かご計算アプリ</h1>
+    <p>ノート：1,200円　ペン：300円　バッグ：2,500円</p>
+    <label for="membership">会員区分：</label>
+    <select id="membership">
+        <option value="general">一般</option>
+        <option value="member">会員</option>
+        <option value="premium">プレミアム</option>
+    </select>
+    <button onclick="calculate()">購入金額を計算</button>
+    <div id="result"></div>
+    <script src="script.js"></script>
+</body>
+</html>
